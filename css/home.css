@@ -1,0 +1,9 @@
+.home-page {
+    --row-gap: 20px;
+}
+
+.home-page .actions {
+    display: flex;
+    flex-direction: column;
+    row-gap: 15px;
+}
