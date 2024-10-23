@@ -1,7 +1,7 @@
 {
-    "name": "RedCherry",
-    "short_name": "RedCherry",
-    "description": "RedCherry Simple PWA",
+    "name": "ALMCred",
+    "short_name": "ALMCred",
+    "description": "ALMCred PWA",
     "icons": [
         {
             "src": "img/fav-192.png",
@@ -27,13 +27,13 @@
             "type": "image/jpeg"
         }
     ],
-    "background_color": "#af0a1a",
-    "theme_color": "#af0a1a",
+    "background_color": "#F3CA45",
+    "theme_color": "#F3CA45",
     "display": "fullscreen",
     "orientation": "any",
-    "start_url": ".",
+    "start_url": "/alm-cred/",
     "url": "index.html",
-    "scope": ".",
+    "scope": "/alm-cred/",
     "lang": "fa-IR",
     "dir": "rtl"
 }
