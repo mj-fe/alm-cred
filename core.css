@@ -1,8 +1,19 @@
 :root {
+    --row-gap: 16px;
+
     --black: #000000;
     --white: #FFFFFF;
+    --info: #00A4DF;
+    --danger: #EE4123;
+    --success: #358B00;
     --warning: #F3CA45;
-    --row-gap: 16px;
+    --secondary: #686868;
+
+    --info-rgb: rgb(0, 164, 223);
+    --danger-rgb: rgb(238, 65, 35);
+    --success-rgb:rgb(53, 139, 0);
+    --warning-rgb: rgb(243, 202, 69);
+    --secondary-rgb: rgb(104, 104, 104);
 }
 
 body {
@@ -41,6 +52,24 @@ h1, h2, h3, h4, h5, h6, p {
     margin: 0;
 }
 
+/* Colors */
+.text-info {
+    color: var(--info) !important;
+}
+
+.text-warning {
+    color: var(--warning) !important;
+}
+
+.text-danger {
+    color: var(--danger) !important;
+}
+
+.text-success {
+    color: var(--success) !important;
+}
+
+/* Buttons */
 .btn {
     --bs-btn-font-size: 22px;
     --bs-btn-font-weight: 500;

@@ -32,6 +32,7 @@
 
     <!-- Styles -->
     <link rel="stylesheet" href="core.css">
+    <link rel="stylesheet" href="order.css">
 
     <script type='text/javascript' src="js/main.js"></script>
 </head>
@@ -98,8 +99,123 @@
         </nav>
     </header>
 
-    <main class="addresses-page">
-        <h1 class="m-auto">Em construção...</h1>
+    <main class="orders-page">
+        <!-- Tabs -->
+        <ul class="nav nav-pills nav-fill">
+            <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="home.html">Início</a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link active" href="orders.html">Pedidos</a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" href="faq.html">Dúvidas</a>
+            </li>
+        </ul>
+
+        <!-- Orders -->
+        <ul class="orders-list list-unstyled">
+            <li class="order-card card">
+                <div class="card-body">
+                    <div>
+                        <div class="d-flex justify-content-between">
+                            <small class="date text-black fw-regular">11/12/2024</small>
+                            <small class="status text-success fw-bold">Solicitado</small>
+                        </div>
+
+                        <p class="address text-secondary">Waldemar de Campos Sobral, 56</p>
+                        <p class="pix text-secondary">Chave Pix: 79981064897</p>
+                    </div>
+
+                    <div class="d-flex justify-content-between">
+                        <div class="payment-method text-secondary">
+                            <div class="flag">
+                                <img
+                                    width="32"
+                                    height="24"
+                                    alt="mastercard"
+                                    class="img-fluid"
+                                    src="img/flags/mastercard.png"
+                                />
+                            </div>
+
+                            <span>12x</span>
+                            <span>R$506,05</span>
+                        </div>
+
+                        <h6 class="total-value fw-semibold text-black">R$5.700,00</h6>
+                    </div>
+                </div>
+            </li>
+
+            <li class="order-card card">
+                <div class="card-body">
+                    <div>
+                        <div class="d-flex justify-content-between">
+                            <small class="date text-black fw-regular">11/12/2024</small>
+                            <small class="status text-info fw-bold">Concluído</small>
+                        </div>
+
+                        <p class="address text-secondary">Waldemar de Campos Sobral, 56</p>
+                        <p class="pix text-secondary">Chave Pix: 79981064897</p>
+                    </div>
+
+                    <div class="d-flex justify-content-between">
+                        <div class="payment-method text-secondary">
+                            <div class="flag">
+                                <img
+                                    width="32"
+                                    height="24"
+                                    alt="mastercard"
+                                    class="img-fluid"
+                                    src="img/flags/mastercard2x.png"
+                                />
+                            </div>
+
+                            <span>12x</span>
+                            <span>R$506,05</span>
+                        </div>
+
+                        <h6 class="total-value fw-semibold text-black">R$2.500,00</h6>
+                    </div>
+                </div>
+            </li>
+
+            <li class="order-card card">
+                <div class="card-body">
+                    <div>
+                        <div class="d-flex justify-content-between">
+                            <small class="date text-black fw-regular">11/12/2024</small>
+                            <small class="status text-danger fw-bold">Cancelado</small>
+                        </div>
+
+                        <p class="address text-secondary">Waldemar de Campos Sobral, 56</p>
+                        <p class="pix text-secondary">Chave Pix: 79981064897</p>
+                    </div>
+
+                    <div class="d-flex justify-content-between">
+                        <div class="payment-method text-secondary">
+                            <div class="flag">
+                                <img
+                                    width="32"
+                                    height="24"
+                                    alt="mastercard"
+                                    class="img-fluid"
+                                    src="img/flags/mastercard2x.png"
+                                />
+                            </div>
+
+                            <span>12x</span>
+                            <span>R$506,05</span>
+                        </div>
+
+                        <h6 class="total-value fw-semibold text-black">R$10.000,00</h6>
+                    </div>
+                </div>
+            </li>
+        </ul>
     </main>
 
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>

@@ -1,0 +1,43 @@
+.orders-page {
+}
+
+.orders-page .orders-list {
+    row-gap: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.orders-page .order-card {
+    border-radius: 8px;
+    border: 1px solid #B6B7B9;
+}
+
+.orders-page .order-card .card-body {
+    row-gap: 8px;
+    padding: 20px 15px 15px 15px;
+    display: flex;
+    flex-direction: column;
+    line-height: 1;
+}
+
+.orders-page .order-card .status {
+    text-transform: uppercase;
+}
+
+.orders-page .order-card .payment-method {
+    display: flex;
+    align-items: center;
+    column-gap: 6px;
+}
+
+.orders-page .order-card .flag {
+    width: 32px;
+    height: 24px;
+    padding: 5px 7px;
+    border-radius: 8px;
+    border: 2px solid #E5E5E5;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
