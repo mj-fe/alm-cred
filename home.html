@@ -35,24 +35,19 @@
     <link rel="stylesheet" type="text/css" href="home.css">
 
     <script type='text/javascript' src="js/main.js"></script>
+    <script type='text/javascript' src="js/sidebar.js"></script>
 </head>
 <body>
     <header>
-        <nav class="navbar navbar-expand-lg py-0">
+        <nav class="navbar py-0">
             <div class="container-fluid p-0">
                 <button
                     type="button"
-                    class="navbar-toggler border-0 p-0"
-                    data-bs-toggle="collapse"
-                    data-bs-target="#navbar"
-                    aria-controls="navbar"
-                    aria-expanded="false"
-                    aria-label="Toggle navigation"
+                    class="sidebar-toggler"
                 >
-                    <i
-                        class="bi bi-list text-black"
-                        style="font-size: 34px;"
-                    ></i>
+                    <div class="bar top"></div>
+                    <div class="bar middle my-0 mx-auto"></div>
+                    <div class="bar bottom"></div>
                 </button>
 
                 <a
@@ -67,129 +62,142 @@
                         height="23"
                     />
                 </a>
-
-                <div class="collapse navbar-collapse" id="navbar">
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                        <li class="nav-item">
-                            <a class="nav-link" href="orders.html">Meus Pedidos</a>
-                        </li>
-
-                        <li class="nav-item">
-                            <a class="nav-link" href="profile.html">Meu Cadastro</a>
-                        </li>
-
-                        <li class="nav-item">
-                            <a class="nav-link" href="addresses.html">Meus Endereços</a>
-                        </li>
-
-                        <li class="nav-item">
-                            <a class="nav-link" href="faq.html">Dúvidas</a>
-                        </li>
-
-                        <li class="nav-item">
-                            <a class="nav-link" href="support.html">Suporte</a>
-                        </li>
-
-                        <li class="nav-item">
-                            <a class="nav-link" href="index.html">Sair</a>
-                        </li>
-                    </ul>
-                </div>
             </div>
         </nav>
     </header>
 
     <main class="home-page">
-        <!-- Tabs -->
-        <ul class="nav nav-pills nav-fill">
-            <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="home.html">Início</a>
-            </li>
-
-            <li class="nav-item">
-                <a class="nav-link" href="orders.html">Pedidos</a>
-            </li>
-
-            <li class="nav-item">
-                <a class="nav-link" href="faq.html">Dúvidas</a>
-            </li>
-        </ul>
-
-        <img
-            class="img-fluid w-100"
-            src="img/home/banner-maquinetas-x2.png"
-            alt="Levamos a maquineta até você"
-        />
-
-        <!-- Carousel -->
-        <div id="carouselHome" class="carousel slide">
-            <div class="carousel-indicators">
+        <nav id="sidebar" class="hidden">
+            <div class="btn-wrapper d-flex">
                 <button
                     type="button"
-                    data-bs-target="#carouselHome"
-                    data-bs-slide-to="0"
-                    class="active"
-                    aria-current="true"
-                    aria-label="Slide 1"
-                ></button>
-                <button
-                    type="button"
-                    data-bs-target="#carouselHome"
-                    data-bs-slide-to="1"
-                    class=""
-                    aria-current="true"
-                    aria-label="Slide 2"
-                ></button>
-                <button
-                    type="button"
-                    data-bs-target="#carouselHome"
-                    data-bs-slide-to="2"
-                    class=""
-                    aria-current="true"
-                    aria-label="Slide 3"
-                ></button>
+                    class="sidebar-toggler active"
+                >
+                    <div class="bar top"></div>
+                    <div class="bar middle my-0 mx-auto"></div>
+                    <div class="bar bottom"></div>
+                </button>
             </div>
 
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <img
-                        class="img-fluid w-100"
-                        src="img/home/propaganda-1.png"
-                        alt="Levamos a maquineta até você"
-                    />
+            <ul class="sidebar-menu">
+                <li class="nav-item">
+                    <a class="nav-link" href="orders.html">Meus Pedidos</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="profile.html">Meu Cadastro</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="addresses.html">Meus Endereços</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="faq.html">Dúvidas</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="support.html">Suporte</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Sair</a>
+                </li>
+            </ul>
+        </nav>
+
+        <div class="content">
+            <!-- Tabs -->
+            <ul class="nav nav-pills nav-fill">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="home.html">Início</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="orders.html">Pedidos</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="faq.html">Dúvidas</a>
+                </li>
+            </ul>
+
+            <img
+                class="img-fluid w-100"
+                src="img/home/banner-maquinetas-x2.png"
+                alt="Levamos a maquineta até você"
+            />
+
+            <!-- Carousel -->
+            <div id="carouselHome" class="carousel slide">
+                <div class="carousel-indicators">
+                    <button
+                        type="button"
+                        data-bs-target="#carouselHome"
+                        data-bs-slide-to="0"
+                        class="active"
+                        aria-current="true"
+                        aria-label="Slide 1"
+                    ></button>
+                    <button
+                        type="button"
+                        data-bs-target="#carouselHome"
+                        data-bs-slide-to="1"
+                        class=""
+                        aria-current="true"
+                        aria-label="Slide 2"
+                    ></button>
+                    <button
+                        type="button"
+                        data-bs-target="#carouselHome"
+                        data-bs-slide-to="2"
+                        class=""
+                        aria-current="true"
+                        aria-label="Slide 3"
+                    ></button>
                 </div>
-                <div class="carousel-item">
-                    <img
-                        class="img-fluid w-100"
-                        src="img/home/propaganda-1.png"
-                        alt="Levamos a maquineta até você"
-                    />
-                </div>
-                <div class="carousel-item">
-                    <img
-                        class="img-fluid w-100"
-                        src="img/home/propaganda-1.png"
-                        alt="Levamos a maquineta até você"
-                    />
+
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img
+                            class="img-fluid w-100"
+                            src="img/home/propaganda-1.png"
+                            alt="Levamos a maquineta até você"
+                        />
+                    </div>
+                    <div class="carousel-item">
+                        <img
+                            class="img-fluid w-100"
+                            src="img/home/propaganda-1.png"
+                            alt="Levamos a maquineta até você"
+                        />
+                    </div>
+                    <div class="carousel-item">
+                        <img
+                            class="img-fluid w-100"
+                            src="img/home/propaganda-1.png"
+                            alt="Levamos a maquineta até você"
+                        />
+                    </div>
                 </div>
             </div>
+
+           <div class="actions mt-auto">
+               <a
+                   href="#"
+                   class="btn btn-outline-success"
+               >
+                   Fazer simulação
+               </a>
+
+               <a
+                   href="#"
+                   class="btn btn-warning"
+               >
+                   Começar
+               </a>
+           </div>
         </div>
-
-       <div class="actions mt-auto">
-           <a
-               href="#"
-               class="btn btn-outline-success"
-           >
-               Fazer simulação
-           </a>
-
-           <a
-               href="#"
-               class="btn btn-warning"
-           >
-               Começar
-           </a>
-       </div>
     </main>
 
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
