@@ -6,7 +6,7 @@
  * learn more in Github : https://github.com/alirahimi818/simple-PWA
  */
 
-var cache_storage_name = 'almcred-pwa-5Nh6n';
+var cache_storage_name = `almcred-pwa-1.0`;
 var start_page = 'index.html';
 var offline_page = 'offline.html';
 var first_cache_urls = [start_page, offline_page];
@@ -28,20 +28,24 @@ self.addEventListener('install', function (e) {
 // Activate
 self.addEventListener('activate', function (e) {
 	console.log('PWA sw activation');
-	e.waitUntil(caches.keys().then(function (kl) {
-		return Promise.all(kl.map(function (key) {
-			if (key !== cache_storage_name) {
-				console.log('PWA old cache removed', key);
-				return caches.delete(key);
-			}
-		}));
-	}));
+	e.waitUntil(
+		caches.keys().then(function (cacheNames) {
+			return Promise.all(
+				cacheNames.map(function (cache) {
+					if (cache !== cache_storage_name) {
+						console.log(`PWA old cache removed: ${cache}`);
+						return caches.delete(cache);
+					}
+				})
+			);
+		})
+	);
+
 	return self.clients.claim();
 });
 
 // Fetch
 self.addEventListener('fetch', function (e) {
-
 	if (!checkFetchRules(e)) return;
 
 	// Strategy for online user
@@ -51,9 +55,11 @@ self.addEventListener('fetch', function (e) {
 				if (never_cache_urls.every(check_never_cache_urls, e.request.url)) {
 					cache.put(e.request, response.clone());
 				}
+
 				return response;
 			});
 		}));
+
 		return;
 	}
 

@@ -1,0 +1,42 @@
+.faq-page {
+}
+
+.faq-page .faq-list {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+}
+
+.faq-page .faq-card {
+    row-gap: 20px;
+    display:  flex;
+    flex-direction: column;
+
+    padding: 20px 15px;
+    border-radius: 8px;
+    border: 1px solid #B6B7B9;
+
+    line-height: 1;
+    font-family: "Inter", sans-serif;
+}
+
+.faq-page .faq-card .header {
+    column-gap: 8px;
+    display: inherit;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.faq-page .faq-card .question {
+    font-size: 14px;
+    color: var(--black);
+}
+
+.faq-page .faq-card .answer {
+    font-size: 12px;
+    color: rgba(0, 0, 0, .7);
+}
+
+.faq-page .faq-card i {
+    transition: all .3s ease-in-out;
+}

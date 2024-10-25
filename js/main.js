@@ -2,7 +2,7 @@
 if ('serviceWorker' in navigator) {
     window.addEventListener('load', function () {
         navigator.serviceWorker.register('./pwa-sw.js')
-            .then(function (register) {
+            .then((register) => {
                 console.log('PWA service worker ready');
                 register.update();
             })
@@ -19,6 +19,5 @@ if ('serviceWorker' in navigator) {
 
         window.addEventListener('online', updateOnlineStatus);
         window.addEventListener('offline', updateOnlineStatus);
-
     });
 }
