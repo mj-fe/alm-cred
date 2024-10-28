@@ -1,6 +1,7 @@
 const KEYS = {
     token: 'token'
 }
+const BASENAME = '/alm-cred'
 
 $(() => {
     const token = localStorage.getItem(KEYS.token)
@@ -9,7 +10,7 @@ $(() => {
         const backTo = $('#header').attr('back-to')
         const isLoggedIn = Boolean(JSON.parse(token))
 
-        $('#logo-link').attr('href', isLoggedIn ? 'home.html' : '/')
+        $('#logo-link').attr('href', isLoggedIn ? `${BASENAME}/home.html` : BASENAME)
 
         if (backTo) {
             $('.sidebar-toggler').addClass('d-none')
@@ -25,7 +26,7 @@ $(() => {
 
     $('body').on('click', '#fake-login', (e) => {
         window.localStorage.setItem(KEYS.token, JSON.stringify(fakeToken()))
-        window.location.href = `${window.location.origin}/home.html`
+        window.location.href = `${window.location.origin}${BASENAME}/home.html`
     })
 })
 
