@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>ALM cred</title>
+    <title>ALM cred | Onboarding</title>
 
     <meta name="msapplication-TileColor" content="#F3CA45">
     <meta name="theme-color" content="#ffffff">
@@ -27,7 +27,7 @@
 
     <!-- Styles -->
     <link rel="stylesheet" href="core.css">
-    <link rel="stylesheet" href="login.css">
+    <link rel="stylesheet" href="onboarding.css">
 
     <!-- Scripts -->
     <script
@@ -35,46 +35,44 @@
         integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
         crossorigin="anonymous"
     ></script>
+    <script type='text/javascript' src="js/jquery.mask.min.js"></script>
     <script type='text/javascript' src="js/main.js"></script>
+    <script type='text/javascript' src="js/masks.js"></script>
+    <script type='text/javascript' src="js/layout.js"></script>
 </head>
 <body>
-    <header class="fake-navbar"></header>
+    <header
+        id="header"
+        back-to="step-1.html"
+    ></header>
 
-    <main class="login-page">
-        <div class="presentation text-center">
-            <img
-                class="img-fluid mx-auto"
-                src="img/logos/extended.png"
-                alt="ALM cred"
-            />
+    <main class="onboarding-page">
+        <form action="step-3.html" id="onboarding-step-2" class="onboarding-stepper">
+            <label for="birthday" class="form-title">
+                Qual a sua <br>
+                <span class="fw-semibold">data de nascimento?</span>
+            </label>
 
-            <img
-                class="w-100 img-fluid gradient"
-                src="img/login/bg.png"
-                alt="Background"
-            />
-        </div>
+            <div>
+                <label for="birthday" class="form-label form-title">
+                    DIA/ MÊS/ ANO
+                </label>
+                <input
+                    autofocus
+                    required
+                    type="text"
+                    id="birthday"
+                    class="form-control date-mask"
+                >
+            </div>
+        </form>
 
-        <div class="began">
-            <h1 class="fw-medium" style="font-size: 36px;">
-                PIX COM <br>
-                CARTÃO DE CRÉDITO
-            </h1>
-            <h2 class="fw-bold" style="font-size: 48px;">
-                EM ATÉ 18X
-            </h2>
-            <p class="fw-semibold" style="font-size: 14px;">
-                Todas as bandeiras.
-                <span class="fw-light">Consulte tabela.</span>
-            </p>
-        </div>
-
-        <a
-            href="step-1.html"
+        <button
+            form="onboarding-step-2"
             class="btn btn-warning text-uppercase mt-auto"
         >
-            Começar
-        </a>
+            Continuar
+        </button>
     </main>
 
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>

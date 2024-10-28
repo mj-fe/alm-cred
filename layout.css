@@ -10,6 +10,7 @@ header {
     z-index: var(--page-index);
 }
 
+.fake-navbar,
 header .navbar,
 #sidebar .btn-wrapper {
     height: 50px;

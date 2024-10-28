@@ -1,0 +1,55 @@
+.onboarding-page {
+}
+
+.onboarding-page .form-title {
+    margin: 0;
+    font-size: 36px;
+    font-weight: 500;
+}
+
+.onboarding-page .form-label {
+    font-size: 12px;
+    font-weight: 400;
+}
+
+.onboarding-page .form-title,
+.onboarding-page .form-label {
+    line-height: 105%;
+    color: var(--black);
+}
+
+.onboarding-page .onboarding-stepper {
+    row-gap: 50px;
+    display: flex;
+    flex-direction: column;
+}
+
+.onboarding-page .ddd-mask {
+    max-width: 59px;
+}
+
+.onboarding-page .address-info {
+    row-gap: 20px;
+    display: flex;
+    flex-direction: column;
+    line-height: 105%;
+    color: var(--black);
+}
+
+.onboarding-page .address-info .state-group {
+    padding: 10px 0;
+    display: grid;
+    row-gap: 20px;
+    border-bottom: 1px solid #E9EAEE;
+}
+
+.onboarding-page .address-info .state-group .state {
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.onboarding-page .address-info .state-group .cities {
+    font-weight: 400;
+    font-size: 16px;
+    color: rgba(0, 0, 0, .7);
+}

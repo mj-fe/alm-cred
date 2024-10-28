@@ -34,11 +34,11 @@ h1, h2, h3, h4, h5, h6, p {
 }
 
 /* Fonts */
-.khand {
+.khand-family {
     font-family: "Khand", serif;
 }
 
-.inter {
+.inter-family {
     font-family: "Inter", sans-serif;
 }
 
@@ -125,4 +125,34 @@ h1, h2, h3, h4, h5, h6, p {
 /* Animation */
 .rotate-180 {
     transform: rotate(180deg);
+}
+
+/* Forms */
+.form-control {
+    --bs-border-color: #E5E5E5;
+
+    height: 54px;
+    border-width: 2px;
+    border-radius: 8px;
+}
+
+.form-control:focus {
+    box-shadow: none;
+    border-color: var(--warning);
+}
+
+.inline-fields {
+    width: 100%;
+    display: flex;
+    column-gap: 10px;
+    align-items: center;
+}
+
+/* Alerts */
+.alert {
+    --bs-border-radius: 8px;
+    --bs-alert-padding-x: 20px;
+    --bs-alert-padding-y: 20px;
+
+    margin: 0;
 }
