@@ -29,7 +29,7 @@
     ],
     "background_color": "#F3CA45",
     "theme_color": "#F3CA45",
-    "display": "fullscreen",
+    "display": "standalone",
     "orientation": "any",
     "start_url": "/alm-cred/",
     "url": "index.html",

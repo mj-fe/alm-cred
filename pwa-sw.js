@@ -6,18 +6,25 @@
  * learn more in Github : https://github.com/alirahimi818/simple-PWA
  */
 
-var cache_storage_name = `almcred-pwa-1.0`;
-var start_page = 'index.html';
-var offline_page = 'offline.html';
-var first_cache_urls = [start_page, offline_page];
-var never_cache_urls = [/\/private.html/, /\/panel/, /\/custom-url/];
+const cacheStorageName = `pwa-almcred-v1`;
+const cacheUrls = [
+	'/',
+	'index.html',
+	'home.html',
+	'offline.html',
+]
+const never_cache_urls = [
+	/\/private.html/,
+	/\/navbar.html/,
+	/\/sidebar.html/,
+]
 
 // Install
 self.addEventListener('install', function (e) {
 	console.log('PWA sw installation');
-	e.waitUntil(caches.open(cache_storage_name).then(function (cache) {
+	e.waitUntil(caches.open(cacheStorageName).then(function (cache) {
 		console.log('PWA sw caching first urls');
-		first_cache_urls.map(function (url) {
+		cacheUrls.map(function (url) {
 			return cache.add(url).catch(function (res) {
 				return console.log('PWA: ' + String(res) + ' ' + url);
 			});
@@ -32,7 +39,7 @@ self.addEventListener('activate', function (e) {
 		caches.keys().then(function (cacheNames) {
 			return Promise.all(
 				cacheNames.map(function (cache) {
-					if (cache !== cache_storage_name) {
+					if (cache !== cacheStorageName) {
 						console.log(`PWA old cache removed: ${cache}`);
 						return caches.delete(cache);
 					}
@@ -51,7 +58,7 @@ self.addEventListener('fetch', function (e) {
 	// Strategy for online user
 	if (e.request.mode === 'navigate' && navigator.onLine) {
 		e.respondWith(fetch(e.request).then(function (response) {
-			return caches.open(cache_storage_name).then(function (cache) {
+			return caches.open(cacheStorageName).then(function (cache) {
 				if (never_cache_urls.every(check_never_cache_urls, e.request.url)) {
 					cache.put(e.request, response.clone());
 				}
@@ -66,7 +73,7 @@ self.addEventListener('fetch', function (e) {
 	// Strategy for offline user
 	e.respondWith(caches.match(e.request).then(function (response) {
 		return response || fetch(e.request).then(function (response) {
-			return caches.open(cache_storage_name).then(function (cache) {
+			return caches.open(cacheStorageName).then(function (cache) {
 				if (never_cache_urls.every(check_never_cache_urls, e.request.url)) {
 					cache.put(e.request, response.clone());
 				}
@@ -83,12 +90,12 @@ function check_never_cache_urls(url) {
 	if (this.match(url)) {
 		return false;
 	}
+
 	return true;
 }
 
 // Fetch Rules
 function checkFetchRules(e) {
-
 	// Check request url from inside domain.
 	if (new URL(e.request.url).origin !== location.origin) return;
 
