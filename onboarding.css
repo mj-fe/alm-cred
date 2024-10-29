@@ -1,29 +1,6 @@
 .onboarding-page {
 }
 
-.onboarding-page .form-title {
-    margin: 0;
-    font-size: 36px;
-    font-weight: 500;
-}
-
-.onboarding-page .form-label {
-    font-size: 12px;
-    font-weight: 400;
-}
-
-.onboarding-page .form-title,
-.onboarding-page .form-label {
-    line-height: 105%;
-    color: var(--black);
-}
-
-.onboarding-page .onboarding-stepper {
-    row-gap: 50px;
-    display: flex;
-    flex-direction: column;
-}
-
 .onboarding-page .ddd-mask {
     max-width: 59px;
 }

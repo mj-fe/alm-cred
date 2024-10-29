@@ -150,6 +150,36 @@ h1, h2, h3, h4, h5, h6, p {
     align-items: center;
 }
 
+.form-title {
+    margin: 0;
+    font-size: 36px;
+    font-weight: 500;
+}
+
+.form-subtitle {
+    margin: 0;
+    font-size: 28px;
+    font-weight: 500;
+}
+
+.form-label {
+    font-size: 12px;
+    font-weight: 400;
+}
+
+.form-title,
+.form-subtitle,
+.form-label {
+    line-height: 105%;
+    color: var(--black);
+}
+
+.form-stepper {
+    row-gap: 50px;
+    display: flex;
+    flex-direction: column;
+}
+
 /* Alerts */
 .alert {
     --bs-border-radius: 8px;
