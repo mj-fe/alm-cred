@@ -43,13 +43,29 @@
 <body>
     <header
         id="header"
-        back-to="order-step-2-with-address.html"
+        back-to="order-step-3.html"
     ></header>
 
     <main class="new-order-page">
-        <form action="order-step-4.html" id="order-step-3" class="form-stepper">
+        <form action="orders.html" id="order-step-4" class="form-stepper">
             <div>
-                <h1 class="form-title mb-4">Confirmar pedido</h1>
+                <h1 class="form-title mb-4">Pedido Confirmado</h1>
+
+                <div class="toast-card card inter-family mb-4">
+                    <img
+                        width="80"
+                        height="72"
+                        class="mx-auto"
+                        src="img/checkmark.gif"
+                        alt="Success"
+                    >
+
+                    <p>
+                        Tudo certo! A maquineta chegará em
+                        seu endereço em até 24h. Fique
+                        atento ao telefone.
+                    </p>
+                </div>
 
                 <div class="d-grid inter-family" style="row-gap: 25px;">
                     <!-- Total value -->
@@ -102,10 +118,10 @@
         </form>
 
         <button
-            form="order-step-3"
+            form="order-step-4"
             class="btn btn-warning text-uppercase mt-auto"
         >
-            Confirmar
+            Ok
         </button>
     </main>
 

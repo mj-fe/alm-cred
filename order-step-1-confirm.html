@@ -43,34 +43,43 @@
 <body>
     <header
         id="header"
-        back-to="home.html"
+        back-to="order-step-1.html"
     ></header>
 
     <main class="new-order-page">
-        <form action="order-step-1-confirm.html" id="order-step-1" class="form-stepper">
-            <div>
-                <h1 class="form-title mb-4">Pedido</h1>
+        <form action="order-step-2.html" id="order-step-1" class="form-stepper">
+            <h1 class="form-title">Confirmar Dados</h1>
 
-                <label for="pix-key" class="form-subtitle">
-                    Qual a chave PIX da conta que você deseja receber?
-                </label>
+            <div class="d-grid" style="row-gap: 25px;">
+                <div class="d-grid inter-family" style="row-gap: 6px;">
+                    <label class="form-label text-secondary m-0" style="font-size: 12px;">NOME</label>
+                    <p class="text-black fw-medium" style="font-size: 16px;">Henrique Silva da Cunha</p>
+                </div>
+
+                <div class="d-grid inter-family" style="row-gap: 6px;">
+                    <label class="form-label text-secondary m-0" style="font-size: 12px;">CPF</label>
+                    <p class="text-black fw-medium" style="font-size: 16px;">056.970.405-02</p>
+                </div>
+
+                <div class="d-grid inter-family" style="row-gap: 6px;">
+                    <label class="form-label text-secondary m-0" style="font-size: 12px;">INSTITUIÇÃO</label>
+                    <p class="text-black fw-medium" style="font-size: 16px;">Caixa Econômica Federal</p>
+                </div>
             </div>
-
-            <input
-                autofocus
-                required
-                type="text"
-                id="pix-key"
-                class="form-control"
-            >
         </form>
 
-        <button
-            form="order-step-1"
-            class="btn btn-warning text-uppercase mt-auto"
-        >
-            Continuar
-        </button>
+        <div class="d-grid mt-auto" style="row-gap: 18px;">
+            <button
+                form="order-step-1"
+                class="btn btn-warning text-capitalize"
+            >
+                Confirmar
+            </button>
+
+            <a href="order-step-1.html" class="btn btn-outline-warning text-capitalize">
+                <span class="text-black">Cancelar</span>
+            </a>
+        </div>
     </main>
 
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
