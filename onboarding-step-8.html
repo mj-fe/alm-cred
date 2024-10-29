@@ -43,32 +43,43 @@
 <body>
     <header
         id="header"
-        back-to="step-4.html"
+        back-to="onboarding-step-7.html"
     ></header>
 
     <main class="onboarding-page">
-        <form action="step-6.html" id="onboarding-step-5" class="onboarding-stepper">
-            <label class="form-title">
-                Insira o
-                <span class="fw-semibold">código</span> <br>
-                enviado no seu celular:
-            </label>
+        <form action="" id="onboarding-step-8" class="onboarding-stepper">
+            <div role="alert" class="alert alert-warning">
+                Desculpe! <br> <br>
+                Ainda não atendemos a sua cidade, mas chegaremos em breve!
+            </div>
 
-            <div class="inline-fields">
-                <input required type="text" class="form-control code-mask" value="2" autofocus>
-                <input required type="text" class="form-control code-mask" value="2">
-                <input required type="text" class="form-control code-mask" value="8">
-                <input required type="text" class="form-control code-mask" value="7">
-                <input required type="text" class="form-control code-mask" value="3">
-                <input required type="text" class="form-control code-mask" value="3">
+            <div class="address-info inter-family">
+                <label class="form-label">ONDE ESTAMOS</label>
+
+                <div class="state-group">
+                    <h6 class="state">Sergipe</h6>
+                    <p class="cities">Todas as cidades</p>
+                </div>
+
+                <div class="state-group">
+                    <h6 class="state">Bahia</h6>
+                    <p class="cities">Salvador</p>
+                    <p class="cities">Lauro de Freitas</p>
+                    <p class="cities">Feira de Santana</p>
+                </div>
+
+                <div class="state-group">
+                    <h6 class="state">Alagoas</h6>
+                    <p class="cities">Maceió</p>
+                </div>
             </div>
         </form>
 
         <button
-            form="onboarding-step-5"
+            id="fake-login"
             class="btn btn-warning text-uppercase mt-auto"
         >
-            Continuar
+            Ir para o início
         </button>
     </main>
 

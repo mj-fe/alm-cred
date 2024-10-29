@@ -43,27 +43,26 @@
 <body>
     <header
         id="header"
-        back-to="/"
+        back-to="onboarding-step-5.html"
     ></header>
 
     <main class="onboarding-page">
-        <form action="step-2.html" id="onboarding-step-1" class="onboarding-stepper">
-            <label for="document" class="form-title">
-                Primeiro, nos diz <br> o seu
-                <span class="fw-semibold">CPF</span>
+        <form action="onboarding-step-7.html" id="onboarding-step-6" class="onboarding-stepper">
+            <label class="form-title">
+                Crie sua
+                <span class="fw-semibold">senha</span>:
             </label>
 
-            <input
-                autofocus
-                required
-                type="text"
-                id="document"
-                class="form-control cpf-mask"
-            >
+            <div class="inline-fields">
+                <input required type="text" class="form-control code-mask" value="2" autofocus>
+                <input required type="text" class="form-control code-mask" value="0">
+                <input required type="text" class="form-control code-mask" value="9">
+                <input required type="text" class="form-control code-mask" value="5">
+            </div>
         </form>
 
         <button
-            form="onboarding-step-1"
+            form="onboarding-step-6"
             class="btn btn-warning text-uppercase mt-auto"
         >
             Continuar

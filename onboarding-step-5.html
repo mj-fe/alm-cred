@@ -43,43 +43,29 @@
 <body>
     <header
         id="header"
-        back-to="step-3.html"
+        back-to="onboarding-step-4.html"
     ></header>
 
     <main class="onboarding-page">
-        <form action="step-5.html" id="onboarding-step-4" class="onboarding-stepper">
-            <label for="ddd" class="form-title">
-                Falta pouco! <br>
-                Informe o seu
-                <span class="fw-semibold">telefone</span>
+        <form action="onboarding-step-6.html" id="onboarding-step-5" class="onboarding-stepper">
+            <label class="form-title">
+                Insira o
+                <span class="fw-semibold">código</span> <br>
+                enviado no seu celular:
             </label>
 
             <div class="inline-fields">
-                <div>
-                    <label for="ddd" class="form-label">DDD</label>
-                    <input
-                        autofocus
-                        required
-                        type="text"
-                        id="ddd"
-                        class="form-control ddd-mask"
-                    >
-                </div>
-
-                <div class="w-75">
-                    <label for="phone" class="form-label">TELEFONE</label>
-                    <input
-                        required
-                        type="text"
-                        id="phone"
-                        class="form-control phone-mask"
-                    >
-                </div>
+                <input required type="text" class="form-control code-mask" value="2" autofocus>
+                <input required type="text" class="form-control code-mask" value="2">
+                <input required type="text" class="form-control code-mask" value="8">
+                <input required type="text" class="form-control code-mask" value="7">
+                <input required type="text" class="form-control code-mask" value="3">
+                <input required type="text" class="form-control code-mask" value="3">
             </div>
         </form>
 
         <button
-            form="onboarding-step-4"
+            form="onboarding-step-5"
             class="btn btn-warning text-uppercase mt-auto"
         >
             Continuar

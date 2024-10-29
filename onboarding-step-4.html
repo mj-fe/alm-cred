@@ -43,43 +43,46 @@
 <body>
     <header
         id="header"
-        back-to="step-7.html"
+        back-to="onboarding-step-3.html"
     ></header>
 
     <main class="onboarding-page">
-        <form action="" id="onboarding-step-8" class="onboarding-stepper">
-            <div role="alert" class="alert alert-warning">
-                Desculpe! <br> <br>
-                Ainda não atendemos a sua cidade, mas chegaremos em breve!
-            </div>
+        <form action="onboarding-step-5.html" id="onboarding-step-4" class="onboarding-stepper">
+            <label for="ddd" class="form-title">
+                Falta pouco! <br>
+                Informe o seu
+                <span class="fw-semibold">telefone</span>
+            </label>
 
-            <div class="address-info inter-family">
-                <label class="form-label">ONDE ESTAMOS</label>
-
-                <div class="state-group">
-                    <h6 class="state">Sergipe</h6>
-                    <p class="cities">Todas as cidades</p>
+            <div class="inline-fields">
+                <div>
+                    <label for="ddd" class="form-label">DDD</label>
+                    <input
+                        autofocus
+                        required
+                        type="text"
+                        id="ddd"
+                        class="form-control ddd-mask"
+                    >
                 </div>
 
-                <div class="state-group">
-                    <h6 class="state">Bahia</h6>
-                    <p class="cities">Salvador</p>
-                    <p class="cities">Lauro de Freitas</p>
-                    <p class="cities">Feira de Santana</p>
-                </div>
-
-                <div class="state-group">
-                    <h6 class="state">Alagoas</h6>
-                    <p class="cities">Maceió</p>
+                <div class="w-75">
+                    <label for="phone" class="form-label">TELEFONE</label>
+                    <input
+                        required
+                        type="text"
+                        id="phone"
+                        class="form-control phone-mask"
+                    >
                 </div>
             </div>
         </form>
 
         <button
-            id="fake-login"
+            form="onboarding-step-4"
             class="btn btn-warning text-uppercase mt-auto"
         >
-            Ir para o início
+            Continuar
         </button>
     </main>
 

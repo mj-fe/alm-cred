@@ -43,32 +43,27 @@
 <body>
     <header
         id="header"
-        back-to="step-1.html"
+        back-to="onboarding-step-2.html"
     ></header>
 
     <main class="onboarding-page">
-        <form action="step-3.html" id="onboarding-step-2" class="onboarding-stepper">
-            <label for="birthday" class="form-title">
-                Qual a sua <br>
-                <span class="fw-semibold">data de nascimento?</span>
+        <form action="onboarding-step-4.html" id="onboarding-step-3" class="onboarding-stepper">
+            <label for="email" class="form-title">
+                Entre com seu <br>
+                <span class="fw-semibold">email</span>
             </label>
 
-            <div>
-                <label for="birthday" class="form-label form-title">
-                    DIA/ MÊS/ ANO
-                </label>
-                <input
-                    autofocus
-                    required
-                    type="text"
-                    id="birthday"
-                    class="form-control date-mask"
-                >
-            </div>
+            <input
+                autofocus
+                required
+                type="email"
+                id="email"
+                class="form-control"
+            >
         </form>
 
         <button
-            form="onboarding-step-2"
+            form="onboarding-step-3"
             class="btn btn-warning text-uppercase mt-auto"
         >
             Continuar

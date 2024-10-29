@@ -43,26 +43,23 @@
 <body>
     <header
         id="header"
-        back-to="step-5.html"
+        back-to="onboarding-step-6.html"
     ></header>
 
     <main class="onboarding-page">
-        <form action="step-7.html" id="onboarding-step-6" class="onboarding-stepper">
-            <label class="form-title">
-                Crie sua
-                <span class="fw-semibold">senha</span>:
+        <form action="onboarding-step-8.html" id="onboarding-step-7" class="onboarding-stepper">
+            <label for="city" class="form-title">
+                Tudo certo! <br>
+                Em qual
+                <span class="fw-semibold">cidade</span> <br>
+                voce está?
             </label>
 
-            <div class="inline-fields">
-                <input required type="text" class="form-control code-mask" value="2" autofocus>
-                <input required type="text" class="form-control code-mask" value="0">
-                <input required type="text" class="form-control code-mask" value="9">
-                <input required type="text" class="form-control code-mask" value="5">
-            </div>
+            <input autofocus required type="text" id="city" class="form-control">
         </form>
 
         <button
-            form="onboarding-step-6"
+            form="onboarding-step-7"
             class="btn btn-warning text-uppercase mt-auto"
         >
             Continuar
