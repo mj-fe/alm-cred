@@ -1,7 +1,7 @@
-const BASENAME = '/alm-cred'
 const KEYS = {
     token: 'token'
 }
+const BASENAME = window.location.protocol === 'http:' ? '' : '/alm-cred'
 
 $(() => {
     const token = localStorage.getItem(KEYS.token)
@@ -35,6 +35,20 @@ $(() => {
     $('body').on('click', '#logout', (e) => {
         window.localStorage.removeItem(KEYS.token)
         window.location.href = `${window.location.origin}${BASENAME}`
+    })
+
+    // Radio button
+    $('body').on('change', '[data-update-on-change]', (e) => {
+        const { updateOnChange, updateValue } = e.target.dataset
+        const elementToUpdate = $(e.currentTarget).closest(updateOnChange)
+
+        $('.radio-button').removeClass('selected')
+
+        if (e.target.checked) {
+            elementToUpdate.addClass(updateValue)
+        } else {
+            elementToUpdate.removeClass(updateValue)
+        }
     })
 })
 

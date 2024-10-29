@@ -143,11 +143,96 @@ h1, h2, h3, h4, h5, h6, p {
     border-color: var(--warning);
 }
 
+.form-check-input {
+    --bs-border-color: #CBCED5;
+    --bs-form-check-bg: #E9EAEE;
+
+    margin: 0;
+    width: 21px;
+    height: 21px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.form-check-input:checked {
+    background-color: #E9EAEE;
+    border-color: #CBCED5;
+}
+
+.form-check-input:focus {
+    box-shadow: none;
+}
+
+.form-check-input:checked::before {
+    content: '';
+    width: 13px;
+    height: 13px;
+    border-radius: 50%;
+    background-color: #484C4F;
+}
+
 .inline-fields {
     width: 100%;
     display: flex;
     column-gap: 10px;
     align-items: center;
+}
+
+.flag-fields {
+    gap: 10px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.flag-fields .flag-label {
+    height: 100%;
+    padding: 10px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 8px;
+    border: 2px solid #E5E5E5;
+}
+
+.flag-fields .flag-input {
+    display: none;
+}
+
+.flag-fields .flag-input:checked ~ .flag-label {
+    border-color: var(--warning);
+}
+
+.radio-button-group {
+    row-gap: 15px;
+    display: flex;
+    align-items: stretch;
+    flex-direction: column;
+}
+
+.radio-button {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 20px 15px;
+    border-radius: 8px;
+    background-color: #F9F9FB;
+    border: 2px solid transparent;
+
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 105%;
+    font-family: "Inter", sans-serif;
+}
+
+.radio-button.selected {
+    background-color: #FFFCF1;
+    border-color: var(--warning);
 }
 
 .form-title {

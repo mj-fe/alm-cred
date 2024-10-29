@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>ALM cred | Simulation</title>
+
+    <meta name="msapplication-TileColor" content="#F3CA45">
+    <meta name="theme-color" content="#ffffff">
+
+    <link rel="shortcut icon" href="img/fav-16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/fav-32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/fav-16.png">
+    <link rel="apple-touch-icon" href="img/fav-57.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="img/fav-114.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="img/fav-72.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="img/fav-144.png">
+
+    <!-- Manifest -->
+    <link rel="manifest" href="pwa-manifest.json">
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="core.css">
+
+    <!-- Scripts -->
+    <script
+        src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+        crossorigin="anonymous"
+    ></script>
+    <script type='text/javascript' src="js/jquery.mask.min.js"></script>
+    <script type='text/javascript' src="js/main.js"></script>
+    <script type='text/javascript' src="js/masks.js"></script>
+    <script type='text/javascript' src="js/layout.js"></script>
+</head>
+<body>
+    <header
+        id="header"
+        back-to="simulation-step-2.html"
+    ></header>
+
+    <main class="simulation-page">
+        <form action="order.html" id="simulation-step-3" class="form-stepper">
+            <h1 class="form-title">Aqui está sua simulação</h1>
+
+            <div class="inter-family">
+                <p class="text-black text-uppercase" style="font-size: 12px;">Você recebe no pix R$</p>
+                <h2 class="fw-bold text-success" style="font-size: 34px;">5.700,00</h2>
+            </div>
+
+            <div class="radio-button-group">
+                <p class="inter-family text-black text-uppercase" style="font-size: 12px;">E paga no cartão em:</p>
+
+                <label for="10x" class="radio-button">
+                    <div class="d-inline-flex align-items-center" style="gap: 10px">
+                        <input
+                            type="radio"
+                            name="installment"
+                            value="10"
+                            id="10x"
+                            class="form-check-input"
+                            data-update-value="selected"
+                            data-update-on-change=".radio-button"
+                        >
+                        <span>10x</span>
+                    </div>
+
+                    <span class="total-value">R$ 589,37</span>
+                </label>
+
+                <label for="12x" class="radio-button selected">
+                    <div class="d-inline-flex align-items-center" style="gap: 10px">
+                        <input
+                            checked
+                            type="radio"
+                            name="installment"
+                            value="12"
+                            id="12x"
+                            class="form-check-input"
+                            data-update-value="selected"
+                            data-update-on-change=".radio-button"
+                        >
+                        <span>12x</span>
+                    </div>
+
+                    <span class="total-value">R$ 506,05</span>
+                </label>
+
+                <label for="18x" class="radio-button">
+                    <div class="d-inline-flex align-items-center" style="gap: 10px">
+                        <input
+                            type="radio"
+                            name="installment"
+                            value="18"
+                            id="18x"
+                            class="form-check-input"
+                            data-update-value="selected"
+                            data-update-on-change=".radio-button"
+                        >
+                        <span>18x</span>
+                    </div>
+
+                    <span class="total-value">R$ 294,10</span>
+                </label>
+
+                <span class="inter-family text-secondary" style="font-size: 10px;">Juros de 2,3% ao mês.</span>
+            </div>
+        </form>
+
+        <button
+            form="simulation-step-3"
+            class="btn btn-warning text-uppercase mt-auto"
+        >
+            Contratar agora
+        </button>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+</body>
+</html>
