@@ -21,6 +21,8 @@
 
 
 body {
+    margin: 0 auto;
+    max-width: 768px;
     background-color: var(--white);
 }
 

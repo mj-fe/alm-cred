@@ -1,7 +1,7 @@
+const BASENAME = '/alm-cred'
 const KEYS = {
     token: 'token'
 }
-const BASENAME = '/alm-cred'
 
 $(() => {
     const token = localStorage.getItem(KEYS.token)
@@ -20,13 +20,21 @@ $(() => {
 
     $('#sidebar').load('layout/sidebar.html')
 
+    // Sidebar toggle
     $('body').on('click', '.sidebar-toggler', (e) => {
         $('#sidebar').toggleClass('hidden')
     })
 
+    // Login
     $('body').on('click', '#fake-login', (e) => {
         window.localStorage.setItem(KEYS.token, JSON.stringify(fakeToken()))
         window.location.href = `${window.location.origin}${BASENAME}/home.html`
+    })
+
+    // Logout
+    $('body').on('click', '#logout', (e) => {
+        window.localStorage.removeItem(KEYS.token)
+        window.location.href = `${window.location.origin}${BASENAME}`
     })
 })
 
