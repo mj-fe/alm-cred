@@ -43,7 +43,7 @@
 <body>
     <header
         id="header"
-        back-to="home.html"
+        back-to="order-step-1.html"
     ></header>
 
     <main class="new-order-page">
@@ -56,23 +56,38 @@
                 </label>
             </div>
 
-            <div class="addresses-card card">
-                <p class="text-secondary text-center" style="font-size: 12px;">Nenhum endereço cadastrado.</p>
+            <div class="radio-button-group">
+                <label for="home" class="radio-button selected">
+                    <div class="d-inline-flex" style="gap: 10px">
+                        <input
+                            checked
+                            type="radio"
+                            name="address"
+                            value="home"
+                            id="home"
+                            class="form-check-input"
+                            data-update-value="selected"
+                            data-update-on-change=".radio-button"
+                        >
 
-                <a
-                    href="new-address.html"
-                    class="btn btn-outline-warning d-flex align-items-center"
-                >
-                    <i class="bi bi-plus-circle me-1" style="font-size: 18px;"></i>
-                    <span class="text-black inter-family text-capitalize" style="font-size: 14px;">
-                        Cadastrar endereço
-                    </span>
-                </a>
+                        <div class="d-grid" style="row-gap: 10px;">
+                            <div>
+                                <i class="bi bi-house me-1"></i>
+                                Casa
+                            </div>
+
+                            <p class="text-secondary" style="font-size: 14px;">
+                                Waldemar de Campos Sobral, 56 <br>
+                                Eduardo Gomes <br>
+                                Aracaju, SE
+                            </p>
+                        </div>
+                    </div>
+                </label>
             </div>
         </form>
 
         <button
-            disabled
             form="order-step-1"
             class="btn btn-warning text-uppercase mt-auto"
         >

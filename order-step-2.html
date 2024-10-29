@@ -43,40 +43,69 @@
 <body>
     <header
         id="header"
-        back-to="home.html"
+        back-to="order-step-1-with-address.html"
     ></header>
 
     <main class="new-order-page">
-        <form action="order-step-2.html" id="order-step-1" class="form-stepper">
+        <form action="order-step-3.html" id="order-step-2" class="form-stepper">
             <div>
-                <h1 class="form-title mb-4">Pedido</h1>
+                <h1 class="form-title mb-4">Confirmar pedido</h1>
 
-                <label for="address" class="form-subtitle">
-                    Em que endereço você quer receber a maquineta?
-                </label>
-            </div>
+                <div class="d-grid inter-family" style="row-gap: 25px;">
+                    <!-- Total value -->
+                    <div>
+                        <p style="font-size: 12px;">VALOR SOLICITADO</p>
+                        <p class="fw-bold" style="font-size: 22px;">5.700,00</p>
+                    </div>
 
-            <div class="addresses-card card">
-                <p class="text-secondary text-center" style="font-size: 12px;">Nenhum endereço cadastrado.</p>
+                    <!-- Pix -->
+                    <div>
+                        <p style="font-size: 12px;">CHAVE PIX</p>
+                        <p class="fw-medium" style="font-size: 16px;">79981064897</p>
+                    </div>
 
-                <a
-                    href="new-address.html"
-                    class="btn btn-outline-warning d-flex align-items-center"
-                >
-                    <i class="bi bi-plus-circle me-1" style="font-size: 18px;"></i>
-                    <span class="text-black inter-family text-capitalize" style="font-size: 14px;">
-                        Cadastrar endereço
-                    </span>
-                </a>
+                    <!-- Installments -->
+                    <div class="d-grid" style="row-gap: 6px;">
+                        <p style="font-size: 12px;">PARCELAS</p>
+
+                        <div class="d-inline-flex align-items-center">
+                            <div class="flag-wrapper">
+                                <label for="visa-flag" class="flag-label">
+                                    <img
+                                        width="66"
+                                        height="21"
+                                        alt="Visa"
+                                        class="img-fluid"
+                                        src="img/flags/visa.png"
+                                    >
+                                </label>
+                            </div>
+
+                            <p class="fw-bold ms-2" style="font-size: 18px;">12x</p>
+                            <p class="fw-bold ms-auto" style="font-size: 18px;">R$ 506,05</p>
+                        </div>
+
+                        <small class="inter-family text-secondary" style="font-size: 10px;">Juros de 2,3% ao mês.</small>
+                    </div>
+
+                    <!-- Address -->
+                    <div>
+                        <p style="font-size: 12px;">ENDEREÇO</p>
+                        <p class="fw-medium" style="font-size: 16px;">
+                            Waldemar de Campos Sobral, 56 <br>
+                            Eduardo Gomes <br>
+                            Aracaju, SE
+                        </p>
+                    </div>
+                </div>
             </div>
         </form>
 
         <button
-            disabled
-            form="order-step-1"
+            form="order-step-2"
             class="btn btn-warning text-uppercase mt-auto"
         >
-            Continuar
+            Confirmar
         </button>
     </main>
 

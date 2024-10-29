@@ -193,7 +193,7 @@ h1, h2, h3, h4, h5, h6, p {
     grid-template-columns: 1fr 1fr 1fr;
 }
 
-.flag-fields .flag-label {
+.flag-label {
     height: 100%;
     padding: 10px;
 
@@ -205,11 +205,11 @@ h1, h2, h3, h4, h5, h6, p {
     border: 2px solid #E5E5E5;
 }
 
-.flag-fields .flag-input {
+.flag-input {
     display: none;
 }
 
-.flag-fields .flag-input:checked ~ .flag-label {
+.flag-input:checked ~ .flag-label {
     border-color: var(--warning);
 }
 
@@ -278,4 +278,26 @@ h1, h2, h3, h4, h5, h6, p {
     --bs-alert-padding-y: 20px;
 
     margin: 0;
+}
+
+/* Toast card */
+.toast-card {
+    display: grid;
+    row-gap: 15px;
+    padding: 20px 15px;
+
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 105%;
+
+    border-radius: 8px;
+    color: var(--black);
+    border: 1px solid #B6B7B9;
+    background-color: var(--white);
+}
+
+.toast-card .icon {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
 }

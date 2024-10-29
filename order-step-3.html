@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>ALM cred | New Order</title>
+
+    <meta name="msapplication-TileColor" content="#F3CA45">
+    <meta name="theme-color" content="#ffffff">
+
+    <link rel="shortcut icon" href="img/fav-16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/fav-32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/fav-16.png">
+    <link rel="apple-touch-icon" href="img/fav-57.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="img/fav-114.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="img/fav-72.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="img/fav-144.png">
+
+    <!-- Manifest -->
+    <link rel="manifest" href="pwa-manifest.json">
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="core.css">
+    <link rel="stylesheet" href="address.css">
+
+    <!-- Scripts -->
+    <script
+        src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+        crossorigin="anonymous"
+    ></script>
+    <script type='text/javascript' src="js/jquery.mask.min.js"></script>
+    <script type='text/javascript' src="js/main.js"></script>
+    <script type='text/javascript' src="js/masks.js"></script>
+    <script type='text/javascript' src="js/layout.js"></script>
+</head>
+<body>
+    <header
+        id="header"
+        back-to="order-step-2.html"
+    ></header>
+
+    <main class="new-order-page">
+        <form action="home.html" id="order-step-3" class="form-stepper">
+            <div>
+                <h1 class="form-title mb-4">Confirmar pedido</h1>
+
+                <div class="toast-card card inter-family mb-4">
+                    <img
+                        width="80"
+                        height="72"
+                        class="mx-auto"
+                        src="img/checkmark.gif"
+                        alt="Success"
+                    >
+
+                    <p>
+                        Tudo certo! A maquineta chegará em
+                        seu endereço em até 24h. Fique
+                        atento ao telefone.
+                    </p>
+                </div>
+
+                <div class="d-grid inter-family" style="row-gap: 25px;">
+                    <!-- Total value -->
+                    <div>
+                        <p style="font-size: 12px;">VALOR SOLICITADO</p>
+                        <p class="fw-bold" style="font-size: 22px;">5.700,00</p>
+                    </div>
+
+                    <!-- Pix -->
+                    <div>
+                        <p style="font-size: 12px;">CHAVE PIX</p>
+                        <p class="fw-medium" style="font-size: 16px;">79981064897</p>
+                    </div>
+
+                    <!-- Installments -->
+                    <div class="d-grid" style="row-gap: 6px;">
+                        <p style="font-size: 12px;">PARCELAS</p>
+
+                        <div class="d-inline-flex align-items-center">
+                            <div class="flag-wrapper">
+                                <label for="visa-flag" class="flag-label">
+                                    <img
+                                        width="66"
+                                        height="21"
+                                        alt="Visa"
+                                        class="img-fluid"
+                                        src="img/flags/visa.png"
+                                    >
+                                </label>
+                            </div>
+
+                            <p class="fw-bold ms-2" style="font-size: 18px;">12x</p>
+                            <p class="fw-bold ms-auto" style="font-size: 18px;">R$ 506,05</p>
+                        </div>
+
+                        <small class="inter-family text-secondary" style="font-size: 10px;">Juros de 2,3% ao mês.</small>
+                    </div>
+
+                    <!-- Address -->
+                    <div>
+                        <p style="font-size: 12px;">ENDEREÇO</p>
+                        <p class="fw-medium" style="font-size: 16px;">
+                            Waldemar de Campos Sobral, 56 <br>
+                            Eduardo Gomes <br>
+                            Aracaju, SE
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </form>
+
+        <button
+            form="order-step-3"
+            class="btn btn-warning text-uppercase mt-auto"
+        >
+            Ok
+        </button>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+</body>
+</html>
