@@ -1,0 +1,16 @@
+.addresses-card {
+    row-gap: 20px;
+    display: flex;
+    flex-direction: column;
+
+    padding: 25px 20px;
+    border-radius: 8px;
+    border-color: transparent;
+    background-color: #F9F9FB;
+
+    font-family: "Inter", sans-serif;
+}
+
+#new-address .radio-button {
+    padding: 21px 10px;
+}

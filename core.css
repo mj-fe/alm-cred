@@ -130,12 +130,18 @@ h1, h2, h3, h4, h5, h6, p {
 }
 
 /* Forms */
+.form-grid {
+    display: grid;
+    row-gap: 20px;
+}
+
 .form-control {
     --bs-border-color: #E5E5E5;
 
     height: 54px;
     border-width: 2px;
     border-radius: 8px;
+    background-color: #FAFAFA;
 }
 
 .form-control:focus {
