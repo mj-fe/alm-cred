@@ -21,85 +21,81 @@
     <!-- Manifest -->
     <link rel="manifest" href="pwa-manifest.json">
 
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Khand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
     <!-- Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 
     <!-- Styles -->
     <link rel="stylesheet" href="core.css">
+    <link rel="stylesheet" href="address.css">
 
+    <!-- Scripts -->
+    <script
+        src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+        crossorigin="anonymous"
+    ></script>
+    <script type='text/javascript' src="js/jquery.mask.min.js"></script>
     <script type='text/javascript' src="js/main.js"></script>
+    <script type='text/javascript' src="js/masks.js"></script>
+    <script type='text/javascript' src="js/layout.js"></script>
 </head>
 <body>
-    <header>
-        <nav class="navbar navbar-expand-lg py-0">
-            <div class="container-fluid p-0">
-                <button
-                    type="button"
-                    class="navbar-toggler border-0 p-0"
-                    data-bs-toggle="collapse"
-                    data-bs-target="#navbar"
-                    aria-controls="navbar"
-                    aria-expanded="false"
-                    aria-label="Toggle navigation"
-                >
-                    <i
-                        class="bi bi-list text-black"
-                        style="font-size: 34px;"
-                    ></i>
-                </button>
+    <header
+        id="header"
+        back-to="home.html"
+    ></header>
 
-                <a
-                    href="home.html"
-                    class="navbar-brand p-0 my-0 mx-auto"
-                >
-                    <img
-                        class="img-fluid"
-                        src="img/logos/extended.png"
-                        alt="ALM cred"
-                        width="91"
-                        height="23"
-                    />
-                </a>
+    <main class="new-order-page">
+        <form id="profile" class="form-stepper">
+            <div class="form-grid inter-family">
+                <div>
+                    <label for="document" class="form-label">CPF</label>
+                    <input
+                        disabled
+                        type="text"
+                        id="document"
+                        name="document"
+                        class="form-control cpf-mask"
+                        value="056.970.405-02"
+                    >
+                </div>
 
-                <div class="collapse navbar-collapse" id="navbar">
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                        <li class="nav-item">
-                            <a class="nav-link" href="orders.html">Meus Pedidos</a>
-                        </li>
+                <div>
+                    <label for="name" class="form-label">NOME</label>
+                    <input
+                        disabled
+                        type="text"
+                        id="name"
+                        name="name"
+                        class="form-control"
+                        value="Henrique Silva"
+                    >
+                </div>
 
-                        <li class="nav-item">
-                            <a class="nav-link" href="profile.html">Meu Cadastro</a>
-                        </li>
+                <div>
+                    <label for="phone" class="form-label">TELEFONE</label>
+                    <input
+                        type="text"
+                        id="phone"
+                        name="phone"
+                        class="form-control phone-with-ddd-mask"
+                        value="79981064897"
+                    >
+                </div>
 
-                        <li class="nav-item">
-                            <a class="nav-link active" href="addresses.html">Meus Endereços</a>
-                        </li>
-
-                        <li class="nav-item">
-                            <a class="nav-link" href="faq.html">Dúvidas</a>
-                        </li>
-
-                        <li class="nav-item">
-                            <a class="nav-link" href="support.html">Suporte</a>
-                        </li>
-
-                        <li class="nav-item">
-                            <a class="nav-link" href="index.html">Sair</a>
-                        </li>
-                    </ul>
+                <div>
+                    <label for="email" class="form-label">EMAIL</label>
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        class="form-control"
+                        value="henrique0978@hotmail.com"
+                    >
                 </div>
             </div>
-        </nav>
-    </header>
-
-    <main class="addresses-page">
-        <h1 class="m-auto">Em construção...</h1>
+        </form>
     </main>
 
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
