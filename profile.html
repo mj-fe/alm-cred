@@ -41,61 +41,64 @@
     <script type='text/javascript' src="js/layout.js"></script>
 </head>
 <body>
-    <header
-        id="header"
-        back-to="home.html"
-    ></header>
+    <header id="header"></header>
 
-    <main class="new-order-page">
-        <form id="profile" class="form-stepper">
-            <div class="form-grid inter-family">
-                <div>
-                    <label for="document" class="form-label">CPF</label>
-                    <input
-                        disabled
-                        type="text"
-                        id="document"
-                        name="document"
-                        class="form-control cpf-mask"
-                        value="056.970.405-02"
-                    >
-                </div>
+    <main class="profile-page">
+        <nav id="sidebar" class="hidden"></nav>
 
-                <div>
-                    <label for="name" class="form-label">NOME</label>
-                    <input
-                        disabled
-                        type="text"
-                        id="name"
-                        name="name"
-                        class="form-control"
-                        value="Henrique Silva"
-                    >
-                </div>
+        <div class="content">
+            <form id="profile" class="form-stepper">
+                <h1 class="form-title">Meu Cadastro</h1>
 
-                <div>
-                    <label for="phone" class="form-label">TELEFONE</label>
-                    <input
-                        type="text"
-                        id="phone"
-                        name="phone"
-                        class="form-control phone-with-ddd-mask"
-                        value="79981064897"
-                    >
-                </div>
+                <div class="form-grid inter-family">
+                    <div>
+                        <label for="document" class="form-label">CPF</label>
+                        <input
+                            disabled
+                            type="text"
+                            id="document"
+                            name="document"
+                            class="form-control cpf-mask"
+                            value="056.970.405-02"
+                        >
+                    </div>
 
-                <div>
-                    <label for="email" class="form-label">EMAIL</label>
-                    <input
-                        type="email"
-                        id="email"
-                        name="email"
-                        class="form-control"
-                        value="henrique0978@hotmail.com"
-                    >
+                    <div>
+                        <label for="name" class="form-label">NOME</label>
+                        <input
+                            disabled
+                            type="text"
+                            id="name"
+                            name="name"
+                            class="form-control"
+                            value="Henrique Silva"
+                        >
+                    </div>
+
+                    <div>
+                        <label for="phone" class="form-label">TELEFONE</label>
+                        <input
+                            type="text"
+                            id="phone"
+                            name="phone"
+                            class="form-control phone-with-ddd-mask"
+                            value="79981064897"
+                        >
+                    </div>
+
+                    <div>
+                        <label for="email" class="form-label">EMAIL</label>
+                        <input
+                            type="email"
+                            id="email"
+                            name="email"
+                            class="form-control"
+                            value="henrique0978@hotmail.com"
+                        >
+                    </div>
                 </div>
-            </div>
-        </form>
+            </form>
+        </div>
     </main>
 
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>

@@ -18,11 +18,11 @@ $(() => {
         }
     })
 
-    $('#sidebar').load('layout/sidebar.html')
-
-    // Sidebar toggle
-    $('body').on('click', '.sidebar-toggler', (e) => {
-        $('#sidebar').toggleClass('hidden')
+    $('#sidebar').load('layout/sidebar.html', () => {
+        // Sidebar toggle
+        $('body').on('click', '.sidebar-toggler', (e) => {
+            $('#sidebar').toggleClass('hidden')
+        })
     })
 
     // Login
