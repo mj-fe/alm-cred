@@ -14,10 +14,11 @@
 
 .orders-page .order-card .card-body {
     row-gap: 8px;
-    padding: 20px 15px 15px 15px;
     display: flex;
-    flex-direction: column;
     line-height: 1;
+    text-decoration: none;
+    flex-direction: column;
+    padding: 20px 15px 15px 15px;
 }
 
 .orders-page .order-card .status {

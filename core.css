@@ -312,3 +312,23 @@ h1, h2, h3, h4, h5, h6, p {
     height: 80px;
     border-radius: 50%;
 }
+
+/* Modals */
+.modal-content {
+    row-gap: 30px;
+}
+
+.modal-header {
+    border: none;
+    padding-bottom: 0;
+}
+
+.modal-body {
+    padding-top: 0;
+}
+
+.modal-title {
+    font-size: 36px;
+    font-weight: medium;
+    color: var(--black);
+}
