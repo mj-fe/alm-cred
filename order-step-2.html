@@ -59,15 +59,17 @@
             <div class="addresses-card card">
                 <p class="text-secondary text-center" style="font-size: 12px;">Nenhum endereço cadastrado.</p>
 
-                <a
-                    href="new-address.html"
+                <button
+                    type="button"
+                    data-bs-toggle="modal"
+                    data-bs-target="#new-address-modal"
                     class="btn btn-outline-warning d-flex align-items-center"
                 >
                     <i class="bi bi-plus-circle me-1" style="font-size: 18px;"></i>
                     <span class="text-black inter-family text-capitalize" style="font-size: 14px;">
                         Cadastrar endereço
                     </span>
-                </a>
+                </button>
             </div>
         </form>
 
@@ -79,6 +81,158 @@
             Continuar
         </button>
     </main>
+
+    <!-- Modal -->
+    <div class="modal fade" id="new-address-modal" tabindex="-1" aria-labelledby="newAddressLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-fullscreen">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title" id="newAddressLabel">Endereço</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+
+                <div class="modal-body">
+                    <form action="order-step-2-with-address.html" id="new-address" class="form-stepper">
+                        <div class="form-grid inter-family">
+                            <!-- ZIPCODE -->
+                            <div>
+                                <label for="zipcode" class="form-label">CEP</label>
+                                <input
+                                    autofocus
+                                    required
+                                    type="text"
+                                    id="zipcode"
+                                    name="zipcode"
+                                    class="form-control zipcode-mask"
+                                >
+                            </div>
+
+                            <!-- STREET -->
+                            <div>
+                                <label for="street" class="form-label">RUA</label>
+                                <input
+                                    required
+                                    type="text"
+                                    id="street"
+                                    name="street"
+                                    class="form-control"
+                                >
+                            </div>
+
+                            <!-- NUMBER / NEIGHBORHOOD -->
+                            <div class="inline-fields">
+                                <div class="w-25">
+                                    <label for="number" class="form-label">NÚMERO</label>
+                                    <input
+                                        required
+                                        type="text"
+                                        id="number"
+                                        name="number"
+                                        class="form-control"
+                                    >
+                                </div>
+
+                                <div class="w-100">
+                                    <label for="neighborhood" class="form-label">BAIRRO</label>
+                                    <input
+                                        required
+                                        type="text"
+                                        id="neighborhood"
+                                        name="neighborhood"
+                                        class="form-control"
+                                    >
+                                </div>
+                            </div>
+
+                            <!-- STATE / CITY -->
+                            <div class="inline-fields">
+                                <div class="w-25">
+                                    <label for="state" class="form-label">ESTADO</label>
+                                    <input
+                                        required
+                                        type="text"
+                                        id="state"
+                                        name="state"
+                                        class="form-control state-mask"
+                                    >
+                                </div>
+
+                                <div class="w-100">
+                                    <label for="city" class="form-label">CIDADE</label>
+                                    <input
+                                        required
+                                        type="text"
+                                        id="city"
+                                        name="city"
+                                        class="form-control"
+                                    >
+                                </div>
+                            </div>
+
+                            <!-- ADDRESS TYPE -->
+                            <div>
+                                <label for="state" class="form-label">FAVORITAR COMO</label>
+
+                                <div class="radio-button-group flex-row" style="column-gap: 10px; font-size: 14px;">
+                                    <label class="radio-button selected">
+                                        <input
+                                            checked
+                                            type="radio"
+                                            name="address_type"
+                                            value="house"
+                                            id="house"
+                                            class="form-check-input d-none"
+                                            data-update-value="selected"
+                                            data-update-on-change=".radio-button"
+                                        >
+                                        <i class="bi bi-house me-1"></i>
+                                        Casa
+                                    </label>
+
+                                    <label class="radio-button">
+                                        <input
+                                            type="radio"
+                                            name="address_type"
+                                            value="house"
+                                            id="house"
+                                            class="form-check-input d-none"
+                                            data-update-value="selected"
+                                            data-update-on-change=".radio-button"
+                                        >
+                                        <i class="bi bi-briefcase me-1"></i>
+                                        Trabalho
+                                    </label>
+
+                                    <label class="radio-button">
+                                        <input
+                                            type="radio"
+                                            name="address_type"
+                                            value="house"
+                                            id="house"
+                                            class="form-check-input d-none"
+                                            data-update-value="selected"
+                                            data-update-on-change=".radio-button"
+                                        >
+                                        <i class="bi bi-heart me-1"></i>
+                                        Outro
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+
+                <div class="modal-footer flex-column border-0">
+                    <button
+                        form="new-address"
+                        class="btn btn-warning m-0"
+                    >
+                        Salvar
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
