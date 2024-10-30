@@ -14,7 +14,16 @@ $(() => {
 
         if (backTo) {
             $('.sidebar-toggler').addClass('d-none')
-            $('#back-btn').attr('href', backTo).removeClass('d-none')
+
+            if (backTo == 'history') {
+                $('body').on('click', '#back-btn', (e) => {
+                    history.back()
+                })
+            } else {
+                $('#back-btn').attr('href', backTo)
+            }
+
+            $('#back-btn').removeClass('d-none')
         }
     })
 

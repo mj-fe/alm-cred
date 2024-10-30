@@ -68,12 +68,19 @@ h1, h2, h3, h4, h5, h6, p {
     --bs-btn-border-radius: 8px;
 
     width: 100%;
-    height: 60px;
     text-transform: uppercase;
 
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.btn:not(.btn-auto) {
+    height: 60px;
+}
+
+.btn.btn-auto {
+    padding: 15px 20px;
 }
 
 .btn-warning {
