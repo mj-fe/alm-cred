@@ -47,7 +47,7 @@
     ></header>
 
     <main class="new-order-page">
-        <form action="order-step-1-confirm.html" id="order-step-1" class="form-stepper">
+        <form action="order-step-2.html" id="order-step-1" class="form-stepper">
             <div>
                 <h1 class="form-title mb-4">Pedido</h1>
 
@@ -58,20 +58,71 @@
 
             <input
                 autofocus
-                required
                 type="text"
                 id="pix-key"
+                name="pix"
                 class="form-control"
             >
         </form>
 
         <button
-            form="order-step-1"
+            data-bs-toggle="modal"
+            data-bs-target="#confirm-data-modal"
             class="btn btn-warning text-uppercase mt-auto"
         >
             Continuar
         </button>
     </main>
+
+    <!-- Modal -->
+    <div class="modal fade" id="confirm-data-modal" tabindex="-1" aria-labelledby="confirmDataLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-fullscreen">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title" id="confirmDataLabel">Confirmar Dados</h1>
+                </div>
+
+                <div class="modal-body">
+                    <div class="form-stepper">
+                        <div class="d-grid" style="row-gap: 25px;">
+                            <div class="d-grid inter-family" style="row-gap: 6px;">
+                                <label class="form-label text-secondary m-0" style="font-size: 12px;">NOME</label>
+                                <p class="text-black fw-medium" style="font-size: 16px;">Henrique Silva da Cunha</p>
+                            </div>
+
+                            <div class="d-grid inter-family" style="row-gap: 6px;">
+                                <label class="form-label text-secondary m-0" style="font-size: 12px;">CPF</label>
+                                <p class="text-black fw-medium" style="font-size: 16px;">056.970.405-02</p>
+                            </div>
+
+                            <div class="d-grid inter-family" style="row-gap: 6px;">
+                                <label class="form-label text-secondary m-0" style="font-size: 12px;">INSTITUIÇÃO</label>
+                                <p class="text-black fw-medium" style="font-size: 16px;">Caixa Econômica Federal</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="modal-footer flex-column border-0" style="row-gap: 18px;">
+                        <button
+                            form="order-step-1"
+                            class="btn btn-warning text-capitalize m-0"
+                        >
+                            Confirmar
+                        </button>
+
+                        <button
+                            type="button"
+                            aria-label="Close"
+                            data-bs-dismiss="modal"
+                            class="btn btn-outline-warning text-capitalize m-0"
+                        >
+                            <span class="text-black">Cancelar</span>
+                        </button>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
