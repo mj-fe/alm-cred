@@ -38,21 +38,19 @@
     <script type='text/javascript' src="js/main.js"></script>
 </head>
 <body>
-    <header class="fake-navbar"></header>
-
-    <main class="login-page">
-        <div class="presentation text-center">
+    <header class="sticky-top bg-white" >
+        <nav class="text-center">
             <img
                 class="img-fluid mx-auto"
                 src="img/logos/extended.png"
                 alt="ALM cred"
             />
+        </nav>
+    </header>
 
-            <img
-                class="w-100 img-fluid gradient"
-                src="img/login/bg.png"
-                alt="Background"
-            />
+    <main class="login-page">
+        <div class="presentation gradient">
+            <div class="bg-image"></div>
         </div>
 
         <div class="began">
@@ -68,14 +66,16 @@
                 <span class="fw-light">Consulte tabela.</span>
             </p>
         </div>
+    </main>
 
+    <footer class="sticky-bottom bg-white">
         <a
             href="onboarding-step-1.html"
             class="btn btn-warning text-uppercase mt-auto"
         >
             Começar
         </a>
-    </main>
+    </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>

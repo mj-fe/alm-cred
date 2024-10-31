@@ -10,6 +10,10 @@ header {
     z-index: var(--page-index);
 }
 
+header.sticky-top {
+    padding: 10px;
+}
+
 .fake-navbar,
 header .navbar,
 #sidebar .btn-wrapper {
@@ -22,7 +26,6 @@ main {
     width: 100%;
     height: 100%;
     padding: 26px;
-    min-height: calc(100vh - 50px);
 
     flex: 1;
     display: flex;
@@ -35,7 +38,9 @@ main {
     transition: transform .7s ease-in-out;
 }
 
-footer {}
+footer {
+    padding: 10px 26px;
+}
 
 .sidebar-toggler {
     width: auto;

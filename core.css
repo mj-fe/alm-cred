@@ -21,6 +21,12 @@
 
 
 body {
+    min-height: 100dvh;
+
+    display: flex;
+    align-items: stretch;
+    flex-direction: column;
+
     margin: 0 auto;
     max-width: 576px;
     background-color: var(--white);

@@ -3,16 +3,22 @@
     padding-top: 0;
 }
 
-.login-page .presentation {
+.login-page .presentation  {
     margin: 0 -26px;
-}
-
-.login-page .presentation .gradient {
     border-bottom-left-radius: 32px;
     border-bottom-right-radius: 32px;
     background: rgb(255, 255, 255);
     background: linear-gradient(180deg, rgba(255, 255, 255, 1) 25%, rgba(255, 246, 212, 1) 100%);
 }
 
-.login-page .began {
+.login-page .presentation .bg-image {
+    height: 250px;
+
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url(img/login/bg.png);
+
+    border-bottom-left-radius: inherit;
+    border-bottom-right-radius: inherit;
 }
