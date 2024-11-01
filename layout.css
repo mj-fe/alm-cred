@@ -1,6 +1,7 @@
 :root {
     --page-index: 1;
     --header-index: 1020; /* bootstrap sticky index */
+    --footer-index: 1020; /* bootstrap sticky index */
     --sidebar-index: 1021;
 
     --sidebar-size: 280px;
@@ -8,14 +9,11 @@
 
 header {
     top: 0;
+    padding: 10px;
     position: -webkit-sticky;
     position: sticky;
     z-index: var(--header-index);
     background-color: var(--white);
-}
-
-header.sticky-top {
-    padding: 10px;
 }
 
 .fake-navbar,
@@ -43,7 +41,12 @@ main {
 }
 
 footer {
+    bottom: 0;
+    position: -webkit-sticky;
+    position: sticky;
     padding: 10px 26px;
+    z-index: var(--footer-index);
+    background-color: var(--white);
 }
 
 .sidebar-toggler {
