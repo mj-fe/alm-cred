@@ -238,6 +238,7 @@ h1, h2, h3, h4, h5, h6, p {
 }
 
 .radio-button {
+    cursor: pointer;
     width: 100%;
     display: flex;
     align-items: center;
