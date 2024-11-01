@@ -6,6 +6,7 @@ const BASENAME = window.location.protocol === 'http:' ? '' : '/alm-cred'
 $(() => {
     const token = localStorage.getItem(KEYS.token)
 
+    // Load navbar
     $('#header').load('layout/navbar.html', () => {
         const backTo = $('#header').attr('back-to')
         const isLoggedIn = Boolean(JSON.parse(token))
@@ -27,6 +28,7 @@ $(() => {
         }
     })
 
+    // Load sidebar
     $('#sidebar').load('layout/sidebar.html', () => {
         // Sidebar toggle
         $('body').on('click', '.sidebar-toggler', (e) => {
@@ -58,6 +60,13 @@ $(() => {
         } else {
             elementToUpdate.removeClass(updateValue)
         }
+    })
+
+    $('body').on('input', '[data-focus-next]', (e) => {
+        const { focusNext, focusWhenLength } = e.target.dataset
+
+        if (e.target.value.length == focusWhenLength)
+            $(focusNext).focus()
     })
 })
 
