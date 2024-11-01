@@ -273,6 +273,7 @@ h1, h2, h3, h4, h5, h6, p {
 .form-label {
     font-size: 12px;
     font-weight: 400;
+    font-family: "Inter", sans-serif;
 }
 
 .form-title,
