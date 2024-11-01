@@ -9,7 +9,7 @@
 
 header {
     top: 0;
-    padding: 10px;
+    padding: 10px 26px;
     position: -webkit-sticky;
     position: sticky;
     z-index: var(--header-index);
@@ -50,6 +50,7 @@ footer {
 }
 
 .sidebar-toggler {
+    padding: 0;
     width: auto;
     border: none;
     display: inline-block;
@@ -103,7 +104,7 @@ footer {
 
 #sidebar .sidebar-menu {
     margin: 0;
-    padding: 20px;
+    padding: 20px 0;
     list-style: none;
 }
 
@@ -111,8 +112,8 @@ footer {
     display: block;
     cursor: pointer;
 
-    padding: 24px 20px;
-    margin-bottom: 10px;
+    margin: 0;
+    padding: 24px 26px;
 
     line-height: 1;
     font-size: 16px;
